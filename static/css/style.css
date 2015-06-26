@@ -1,0 +1,43 @@
+body {
+	font-family: Futura, Helvetica, sans-serif;
+}
+
+div {
+	display: block;
+}
+
+button {
+	min-width: 80px;
+	min-height: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+button:hover {
+	border: 1px dashed darkred;
+}
+
+#top-container {
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#container {
+	overflow: auto;
+	width: 500px;
+	margin: auto;
+	border: 3px solid black;
+}
+
+.square {
+	background-color: white;
+	float: left;
+	border: 1px solid black;
+}
+
+.new-row {
+	clear: both;
+}
