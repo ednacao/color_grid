@@ -3,28 +3,20 @@ var initialColor = "#ffffff"
 
 $(document).ready(function() {
     load(initialSize, initialColor);
-    colorSquare();
     randomColors();
 });
 
-function colorSquare(event) {
-    $(".square").click(function(){
-        getRandomColor();
-    })
-}
-
-function resetSquare(color) {
-    if (this.color == initialColor) {
-        $(".square").val(color);
-    }
-    else {
-        $(".square").val(initialColor);
-    }
-};
 
 function randomColors() {
     $(".square").click(function() {
-        $(this).css('background-color', getRandomColor());
+        if (this.color == true) {
+            $(this).css('background-color', initialColor); 
+                this.color = false;
+        }
+        else {
+            $(this).css('background-color', getRandomColor()); 
+                this.color = true;
+        }
     });
 };
 
@@ -60,7 +52,7 @@ function operate(option) {
         clear();
         return;
     }
-    current_option = option;
+    currentOption = option;
     var size = prompt("Enter a grid size (0 < x < 128).");
     //Size given must be valid.
     if ((size > 0) && (size < 128)) {
