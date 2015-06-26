@@ -40,7 +40,6 @@ function load(size) {
     $("#container").append("<div class='new_row'></div>");
     }
 
-    //Adjust the square size.
     $(".square").css('width', squareSize);
     $(".square").css('height', squareSize);
 };
@@ -48,10 +47,15 @@ function load(size) {
 
 
 function operate(option) {
-    if (option == 4) {
+    if (option == 2) {
         clear();
         return;
     }
+
+    else if (option == 1) {
+        $("body").innerHTML;
+    }
+
     currentOption = option;
     var size = prompt("Enter a grid size (0 < x < 128).");
     //Size given must be valid.
